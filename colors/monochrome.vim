@@ -115,7 +115,7 @@ call s:hi('SignColumn')
 
 call s:hi('Statement', s:lgray, s:default_bg)
 call s:hi('PreProc', s:lgray, s:default_bg)
-call s:hi('String', s:sblue)
+call s:hi('String', s:lgray)
 call s:hi('Comment', s:lgray, s:default_bg, s:comment_attr)
 call s:hi('Constant')
 call s:hi('Type', s:lgray, s:default_bg)
