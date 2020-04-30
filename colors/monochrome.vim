@@ -28,7 +28,6 @@ let s:default_fg = s:lgray
 let s:default_bg = s:black
 
 let s:italic    = 'italic'
-let s:bold      = 'bold'
 let s:underline = 'underline'
 let s:none      = 'NONE'
 
@@ -74,7 +73,7 @@ endfunction
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
 call s:hi('CursorLine', s:default_lst, s:bgray, s:none)
-call s:hi('CursorLineNr', s:white, s:default_bg, s:bold)
+call s:hi('CursorLineNr', s:white, s:default_bg)
 call s:hi('ColorColumn', s:default_fg, s:bgray)
 call s:hi('Search', s:white, s:sblue)
 call s:hi('Visual', s:white, s:sblue)
@@ -91,10 +90,10 @@ call s:hi('Folded')
 call s:hi('LineNr', s:dgray)
 
 " Small arrow used for tabs.
-call s:hi('SpecialKey', s:sblue, s:default_bg, s:bold)
+call s:hi('SpecialKey', s:sblue, s:default_bg)
 
 " File browsers.
-call s:hi('Directory', s:white, s:default_bg, s:bold)
+call s:hi('Directory', s:white, s:default_bg)
 
 " Help.
 call s:hi('helpSpecial')
@@ -106,7 +105,7 @@ call s:hi('Pmenu', s:white, s:sblue)
 call s:hi('PmenuSel', s:sblue, s:white)
 
 " Notes.
-call s:hi('Todo', s:black, s:yellow, s:bold)
+call s:hi('Todo', s:black, s:yellow)
 
 " Signs.
 call s:hi('SignColumn')
@@ -115,12 +114,12 @@ call s:hi('SignColumn')
 " --- Programming languages ----------------------------------------------------
 "
 
-call s:hi('Statement', s:white, s:default_bg, s:bold)
-call s:hi('PreProc', s:white, s:default_bg, s:bold)
+call s:hi('Statement', s:white, s:default_bg)
+call s:hi('PreProc', s:white, s:default_bg)
 call s:hi('String', s:sblue)
-call s:hi('Comment', s:cgray, s:default_bg, s:comment_attr)
+call s:hi('Comment', s:lgray, s:default_bg, s:comment_attr)
 call s:hi('Constant')
-call s:hi('Type', s:white, s:default_bg, s:bold)
+call s:hi('Type', s:white, s:default_bg)
 call s:hi('Function', s:white)
 call s:hi('Identifier')
 call s:hi('Special')
@@ -199,7 +198,7 @@ call s:hi('pythonEscape', s:sblue)
 " --- JavaScript ---------------------------------------------------------------
 "
 
-call s:hi('javaScriptFunction', s:white, s:default_bg, s:bold)
+call s:hi('javaScriptFunction', s:white, s:default_bg)
 
 
 "
@@ -219,9 +218,9 @@ call s:hi('diffRemoved', s:white, s:red)
 " --- Markdown -----------------------------------------------------------------
 "
 
-call s:hi('Title', s:white, s:default_bg, s:bold)
-call s:hi('markdownHeadingDelimiter', s:white, s:default_bg, s:bold)
-call s:hi('markdownHeadingRule', s:white, s:default_bg, s:bold)
+call s:hi('Title', s:white, s:default_bg)
+call s:hi('markdownHeadingDelimiter', s:white, s:default_bg)
+call s:hi('markdownHeadingRule', s:white, s:default_bg)
 call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
 
@@ -232,7 +231,7 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 call s:hi('gitcommitComment', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitOnBranch', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitBranch', s:sblue, s:default_bg, s:none)
-call s:hi('gitcommitHeader', s:white, s:default_bg, s:bold)
+call s:hi('gitcommitHeader', s:white, s:default_bg)
 call s:hi('gitcommitSelected', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitDiscarded', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitSelectedType', s:default_fg, s:default_bg, s:none)
@@ -248,6 +247,6 @@ call s:hi('NeomakeWarningSign', s:sblue)
 call s:hi('NeomakeErrorSign', s:yellow)
 call s:hi('NeomakeInfoSign')
 call s:hi('NeomakeError', s:yellow)
-call s:hi('NeomakeInfo', s:default_fg, s:default_bg, s:bold)
+call s:hi('NeomakeInfo', s:default_fg, s:default_bg)
 call s:hi('NeomakeMessage')
 call s:hi('NeomakeWarning', s:yellow)
