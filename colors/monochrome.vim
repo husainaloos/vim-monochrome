@@ -13,7 +13,6 @@ endif
 
 let g:colors_name = 'monochrome'
 
-let s:white  = ['White', 15]
 let s:black  = ['#0e1111', 16]
 let s:bgray  = ['#181818', 233]
 let s:lgray  = ['LightGray', 255]
@@ -73,11 +72,11 @@ endfunction
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
 call s:hi('CursorLine', s:default_lst, s:bgray, s:none)
-call s:hi('CursorLineNr', s:white, s:default_bg)
+call s:hi('CursorLineNr', s:lgray, s:default_bg)
 call s:hi('ColorColumn', s:default_fg, s:bgray)
-call s:hi('Search', s:white, s:sblue)
-call s:hi('Visual', s:white, s:sblue)
-call s:hi('ErrorMsg', s:white, s:red)
+call s:hi('Search', s:lgray, s:sblue)
+call s:hi('Visual', s:lgray, s:sblue)
+call s:hi('ErrorMsg', s:lgray, s:red)
 
 " Tildes at the bottom of a buffer, etc.
 call s:hi('NonText', s:dgray)
@@ -93,7 +92,7 @@ call s:hi('LineNr', s:dgray)
 call s:hi('SpecialKey', s:sblue, s:default_bg)
 
 " File browsers.
-call s:hi('Directory', s:white, s:default_bg)
+call s:hi('Directory', s:lgray, s:default_bg)
 
 " Help.
 call s:hi('helpSpecial')
@@ -101,8 +100,8 @@ call s:hi('helpHyperTextJump', s:sblue, s:default_bg, s:underline)
 call s:hi('helpNote')
 
 " Popup menu.
-call s:hi('Pmenu', s:white, s:sblue)
-call s:hi('PmenuSel', s:sblue, s:white)
+call s:hi('Pmenu', s:lgray, s:sblue)
+call s:hi('PmenuSel', s:sblue, s:lgray)
 
 " Notes.
 call s:hi('Todo', s:black, s:yellow)
@@ -114,13 +113,13 @@ call s:hi('SignColumn')
 " --- Programming languages ----------------------------------------------------
 "
 
-call s:hi('Statement', s:white, s:default_bg)
-call s:hi('PreProc', s:white, s:default_bg)
+call s:hi('Statement', s:lgray, s:default_bg)
+call s:hi('PreProc', s:lgray, s:default_bg)
 call s:hi('String', s:sblue)
 call s:hi('Comment', s:lgray, s:default_bg, s:comment_attr)
 call s:hi('Constant')
-call s:hi('Type', s:white, s:default_bg)
-call s:hi('Function', s:white)
+call s:hi('Type', s:lgray, s:default_bg)
+call s:hi('Function', s:lgray)
 call s:hi('Identifier')
 call s:hi('Special')
 call s:hi('MatchParen', s:black, s:lgray)
@@ -198,7 +197,7 @@ call s:hi('pythonEscape', s:sblue)
 " --- JavaScript ---------------------------------------------------------------
 "
 
-call s:hi('javaScriptFunction', s:white, s:default_bg)
+call s:hi('javaScriptFunction', s:lgray, s:default_bg)
 
 
 "
@@ -210,17 +209,17 @@ call s:hi('diffNewFile', s:cgray)
 call s:hi('diffIndexLine', s:cgray)
 call s:hi('diffLine', s:cgray)
 call s:hi('diffSubname', s:cgray)
-call s:hi('diffAdded', s:white, s:green)
-call s:hi('diffRemoved', s:white, s:red)
+call s:hi('diffAdded', s:lgray, s:green)
+call s:hi('diffRemoved', s:lgray, s:red)
 
 
 "
 " --- Markdown -----------------------------------------------------------------
 "
 
-call s:hi('Title', s:white, s:default_bg)
-call s:hi('markdownHeadingDelimiter', s:white, s:default_bg)
-call s:hi('markdownHeadingRule', s:white, s:default_bg)
+call s:hi('Title', s:lgray, s:default_bg)
+call s:hi('markdownHeadingDelimiter', s:lgray, s:default_bg)
+call s:hi('markdownHeadingRule', s:lgray, s:default_bg)
 call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
 
@@ -231,7 +230,7 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 call s:hi('gitcommitComment', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitOnBranch', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitBranch', s:sblue, s:default_bg, s:none)
-call s:hi('gitcommitHeader', s:white, s:default_bg)
+call s:hi('gitcommitHeader', s:lgray, s:default_bg)
 call s:hi('gitcommitSelected', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitDiscarded', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitSelectedType', s:default_fg, s:default_bg, s:none)
