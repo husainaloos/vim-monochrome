@@ -103,6 +103,9 @@ call s:hi('helpNote')
 call s:hi('Pmenu', s:lgray, s:sblue)
 call s:hi('PmenuSel', s:sblue, s:lgray)
 
+" Notes.
+call s:hi('Todo', s:black, s:yellow)
+
 " Signs.
 call s:hi('SignColumn')
 
