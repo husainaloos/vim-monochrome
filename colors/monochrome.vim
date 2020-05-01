@@ -70,13 +70,13 @@ endfunction
 "
 
 call s:hi('Normal')
-call s:hi('Cursor', s:black, s:lgray)
+call s:hi('Cursor', s:black, s:default_fg)
 call s:hi('CursorLine', s:default_lst, s:bgray, s:none)
-call s:hi('CursorLineNr', s:lgray, s:default_bg)
+call s:hi('CursorLineNr')
 call s:hi('ColorColumn', s:default_fg, s:bgray)
-call s:hi('Search', s:lgray, s:sblue)
-call s:hi('Visual', s:lgray, s:sblue)
-call s:hi('ErrorMsg', s:lgray, s:red)
+call s:hi('Search', s:default_fg, s:sblue)
+call s:hi('Visual', s:default_fg, s:sblue)
+call s:hi('ErrorMsg', s:default_fg, s:red)
 
 " Tildes at the bottom of a buffer, etc.
 call s:hi('NonText', s:dgray)
@@ -92,7 +92,7 @@ call s:hi('LineNr', s:dgray)
 call s:hi('SpecialKey', s:sblue, s:default_bg)
 
 " File browsers.
-call s:hi('Directory', s:lgray, s:default_bg)
+call s:hi('Directory')
 
 " Help.
 call s:hi('helpSpecial')
@@ -100,11 +100,12 @@ call s:hi('helpHyperTextJump', s:sblue, s:default_bg, s:underline)
 call s:hi('helpNote')
 
 " Popup menu.
-call s:hi('Pmenu', s:lgray, s:sblue)
-call s:hi('PmenuSel', s:sblue, s:lgray)
+call s:hi('Pmenu', s:default_fg, s:sblue)
+call s:hi('PmenuSel', s:sblue, s:default_fg)
 
 " Notes.
-call s:hi('Todo', s:black, s:yellow)
+" TODO
+call s:hi('Todo')
 
 " Signs.
 call s:hi('SignColumn')
@@ -113,16 +114,16 @@ call s:hi('SignColumn')
 " --- Programming languages ----------------------------------------------------
 "
 
-call s:hi('Statement', s:lgray, s:default_bg)
-call s:hi('PreProc', s:lgray, s:default_bg)
-call s:hi('String', s:lgray)
-call s:hi('Comment', s:lgray, s:default_bg, s:comment_attr)
+call s:hi('Statement')
+call s:hi('PreProc')
+call s:hi('String')
+call s:hi('Comment', s:default_fg, s:default_bg, s:comment_attr)
 call s:hi('Constant')
-call s:hi('Type', s:lgray, s:default_bg)
-call s:hi('Function', s:lgray)
+call s:hi('Type')
+call s:hi('Function')
 call s:hi('Identifier')
 call s:hi('Special')
-call s:hi('MatchParen', s:black, s:lgray)
+call s:hi('MatchParen', s:black, s:default_fg)
 
 
 "
@@ -159,9 +160,9 @@ call s:hi('rubyRegexpSpecial', s:sblue)
 " --- Elixir -------------------------------------------------------------------
 "
 
-call s:hi('elixirAlias', s:default_fg, s:default_bg, s:none)
+call s:hi('elixirAlias')
 call s:hi('elixirDelimiter', s:sblue)
-call s:hi('elixirSelf', s:default_fg, s:default_bg, s:none)
+call s:hi('elixirSelf')
 
 " For ||, ->, etc.
 call s:hi('elixirOperator')
@@ -197,7 +198,7 @@ call s:hi('pythonEscape', s:sblue)
 " --- JavaScript ---------------------------------------------------------------
 "
 
-call s:hi('javaScriptFunction', s:lgray, s:default_bg)
+call s:hi('javaScriptFunction')
 
 
 "
@@ -209,17 +210,17 @@ call s:hi('diffNewFile', s:cgray)
 call s:hi('diffIndexLine', s:cgray)
 call s:hi('diffLine', s:cgray)
 call s:hi('diffSubname', s:cgray)
-call s:hi('diffAdded', s:lgray, s:green)
-call s:hi('diffRemoved', s:lgray, s:red)
+call s:hi('diffAdded', s:default_fg, s:green)
+call s:hi('diffRemoved', s:default_fg, s:red)
 
 
 "
 " --- Markdown -----------------------------------------------------------------
 "
 
-call s:hi('Title', s:lgray, s:default_bg)
-call s:hi('markdownHeadingDelimiter', s:lgray, s:default_bg)
-call s:hi('markdownHeadingRule', s:lgray, s:default_bg)
+call s:hi('Title')
+call s:hi('markdownHeadingDelimiter')
+call s:hi('markdownHeadingRule')
 call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
 
@@ -227,14 +228,14 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 " --- vim-fugitive -------------------------------------------------------------
 "
 
-call s:hi('gitcommitComment', s:default_fg, s:default_bg, s:none)
-call s:hi('gitcommitOnBranch', s:default_fg, s:default_bg, s:none)
+call s:hi('gitcommitComment')
+call s:hi('gitcommitOnBranch')
 call s:hi('gitcommitBranch', s:sblue, s:default_bg, s:none)
-call s:hi('gitcommitHeader', s:lgray, s:default_bg)
-call s:hi('gitcommitSelected', s:default_fg, s:default_bg, s:none)
-call s:hi('gitcommitDiscarded', s:default_fg, s:default_bg, s:none)
-call s:hi('gitcommitSelectedType', s:default_fg, s:default_bg, s:none)
-call s:hi('gitcommitDiscardedType', s:default_fg, s:default_bg, s:none)
+call s:hi('gitcommitHeader')
+call s:hi('gitcommitSelected')
+call s:hi('gitcommitDiscarded')
+call s:hi('gitcommitSelectedType')
+call s:hi('gitcommitDiscardedType')
 
 
 "
@@ -246,6 +247,6 @@ call s:hi('NeomakeWarningSign', s:sblue)
 call s:hi('NeomakeErrorSign', s:yellow)
 call s:hi('NeomakeInfoSign')
 call s:hi('NeomakeError', s:yellow)
-call s:hi('NeomakeInfo', s:default_fg, s:default_bg)
+call s:hi('NeomakeInfo')
 call s:hi('NeomakeMessage')
 call s:hi('NeomakeWarning', s:yellow)
